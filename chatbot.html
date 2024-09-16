@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit.ai - Chatbot</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Fruit.ai Chatbot</h1>
+    </header>
+
+    <main>
+        <div class="chat-container">
+            <div class="chat-area">
+                <!-- Chat messages will be displayed here -->
+                <div class="chat-message bot-message">
+                    Hello! Ask me about any fruit, and I'll provide details.
+                </div>
+            </div>
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="Type a question...">
+                <button onclick="sendMessage()">Send</button>
+                <button onclick="startVoiceRecognition()">🎙️</button>
+            </div>
+        </div>
+
+        <div class="fruit-list">
+            <h2>Explore Fruits</h2>
+            <div class="fruit-cards">
+                <!-- Example Fruit Card -->
+                <div class="fruit-card" onclick="showFruitDetails('Apple')">
+                    <img src="images/apple.png" alt="Apple">
+                    <p>Apple</p>
+                </div>
+                <div class="fruit-card" onclick="showFruitDetails('Banana')">
+                    <img src="images/banana.png" alt="Banana">
+                    <p>Banana</p>
+                </div>
+                <div class="fruit-card" onclick="showFruitDetails('Orange')">
+                    <img src="images/orange.png" alt="Orange">
+                    <p>Orange</p>
+                </div>
+                <!-- Add more fruit cards as needed -->
+            </div>
+        </div>
+
+        <div id="fruit-details" class="fruit-details">
+            <!-- Detailed fruit information will be displayed here -->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Fruit.ai. All rights reserved.</p>
+    </footer>
+
+    <script src="js/chatbot.js"></script>
+</body>
+</html>
